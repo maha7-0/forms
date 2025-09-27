@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Search Box Demo</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f4f4;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .search-container {
+      background: white;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input[type="text"] {
+      padding: 10px;
+      width: 300px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    input[type="submit"] {
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      margin-left: 10px;
+      cursor: pointer;
+    }
+    input[type="submit"]:hover {
+      background: #0056b3;
+    }
+  </style>
+</head>
+<body>
+  <div class="search-container">
+    <form action="https://formsubmit.co/jmahalakshmi077@gmail.com" method="POST">
+      <input type="text" name="search" placeholder="Type your query here..." required>
+      <input type="submit" value="Submit">
+      <!-- Optional: prevent spam -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://maha.in.github.io/thankyou.html">
+    </form>
+  </div>
+</body>
+</html>
