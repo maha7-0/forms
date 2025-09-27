@@ -5,45 +5,88 @@
   <title>Search Box Demo</title>
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f4f4f4;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: linear-gradient(to right, #e0eafc, #cfdef3);
       display: flex;
       justify-content: center;
       align-items: center;
       height: 100vh;
+      margin: 0;
     }
+
     .search-container {
       background: white;
-      padding: 30px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+      padding: 40px;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+      animation: fadeIn 1s ease-in-out;
+      text-align: center;
     }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    h2 {
+      margin-bottom: 20px;
+      color: #333;
+    }
+
     input[type="text"] {
-      padding: 10px;
-      width: 300px;
+      padding: 12px;
+      width: 280px;
       border: 1px solid #ccc;
-      border-radius: 4px;
+      border-radius: 6px;
+      font-size: 16px;
+      transition: border-color 0.3s ease;
     }
+
+    input[type="text"]:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
     input[type="submit"] {
-      padding: 10px 20px;
+      padding: 12px 24px;
       background: #007bff;
       color: white;
+      font-size: 16px;
       border: none;
-      border-radius: 4px;
+      border-radius: 6px;
       margin-left: 10px;
       cursor: pointer;
+      transition: background 0.3s ease;
     }
+
     input[type="submit"]:hover {
       background: #0056b3;
+    }
+
+    @media (max-width: 500px) {
+      .search-container {
+        width: 90%;
+        padding: 20px;
+      }
+
+      input[type="text"] {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        margin-left: 0;
+      }
     }
   </style>
 </head>
 <body>
   <div class="search-container">
+    <h2>Search Box Demo</h2>
     <form action="https://formsubmit.co/jmahalakshmi077@gmail.com" method="POST">
       <input type="text" name="search" placeholder="Type your query here..." required>
       <input type="submit" value="Submit">
-   
     </form>
   </div>
 </body>
